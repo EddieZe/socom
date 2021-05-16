@@ -1,6 +1,6 @@
-# Quite Rent
+# SoCom
 
-Quite Rent is a rating platform apartments renters
+SoCom
 
 ## Installation
 
