@@ -1,0 +1,35 @@
+{
+  "name": "quite_rent",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "start": "webpack-dev-server --progress --hot --config webpack.dev.js",
+    "build": "webpack --progress --config webpack.prod.js",
+    "build-dev": "webpack --progress --config webpack.dev.js",
+    "test": "jest"
+  },
+  "author": "Eddie Zeltser",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "@types/jest": "^24.0.23",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router-dom": "^5.1.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "source-map-loader": "^0.2.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
