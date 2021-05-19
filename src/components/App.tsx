@@ -1,33 +1,36 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
-import * as history from "history";
+import React, { Component, useState } from 'react'
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom"
+import * as history from "history"
+import { Provider } from 'react-redux'
 
-import Residances from './residance'
-import { IResidance } from './types';
+import { configureStore } from './../common/store'
+import { getResidents } from './service'
+import Residents from './Residents/residents'
+
 
 const browserHistory = history.createBrowserHistory();
 
-function BasePage() {
-    return <div>Base Page</div>;
+class BasePage extends Component<any> {
+    render() {
+        return <div>Base Page</div>;
+    }
 }
 
-function LoginPage() {
-    return <div>Login Page</div>;
+class LoginPage extends Component<any> {
+    render() {
+        return <div>Login Page</div>;
+    }
 }
 
-function HomePage() {
-    const residances: IResidance[] = [
-        { id: 1, name: 'Eddie Zeltser', phoneNumber: '0546340108' },
-        { id: 2, name: 'Tamar Haran', phoneNumber: '0547494934' },
-        { id: 3, name: 'Dima Katz', phoneNumber: '0544343434' }
-    ]
+const HomePage = () => {
     return (
-        <Residances residances = { residances } />
+        <Provider store={configureStore()}>
+            <Residents />
+        </Provider>
     )
-
 }
 
-class App extends React.Component {
+class App extends Component {
     render() {
         return (
             <Router>
